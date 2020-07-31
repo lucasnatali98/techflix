@@ -5,6 +5,7 @@ import BannerMain from '../../components/BannerMain';
 import Carousel from '../../components/Carrossel';
 import Footer from '../../components/Footer';
 
+
 function Home() {
   return (
     <div>
@@ -39,5 +40,8 @@ function Home() {
     </div>
   );
 }
+
+
+
 
 export default Home;
