@@ -30,11 +30,12 @@ function CadastroCategoria() {
   }
 
   // tem que mostrar quando, como e onde será feito
-  useEffect(() => {
-    console.log('xiiiiiiiia');
-    const URL = 'http://localhost:8080/categorias';
+  useEffect(() => {  
+    const URL_TOP = window.location.hostname.includes('localhost')
+      ? 'http://localhost:8080/categorias'
+      : 'https://techflixproject.herokuapp.com/categorias';
 
-    fetch(URL)
+    fetch(URL_TOP)
       .then(async (res) => {
         const resposta = await res.json();
         setCategorias([
